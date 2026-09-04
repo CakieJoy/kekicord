@@ -19,5 +19,12 @@ bot = MyBot()
 async def on_ready():
     print(f"Bot succesfully logged as {bot.user}")
 
+@bot.tree.command(name="hug-everyone", description="Hugs to everyone :3")
+async def hug_everyone(interaction: discord.Interaction):
+    display_name = interaction.user.display_name
+    embed = discord.Embed(title=f"{display_name} hugs everyone :3",)
+    embed.set_image(url="https://c.tenor.com/SYsRdiK-T7gAAAAC/tenor.gif")
+
+    await interaction.response.send_message(embed=embed)
 
 bot.run(dotenv.get_key(dotenv.find_dotenv(), "DEBUG_DISCORD_TOKEN"))
