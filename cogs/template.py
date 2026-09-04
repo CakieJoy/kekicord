@@ -7,6 +7,8 @@ class commandName(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="command-name", description="Description of the command")
+    @app_commands.allowed_installs(guilds=True, users=True)
+    @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
     async def command_name(self, interaction: discord.Interaction):
         pass
         # * codes of your command
