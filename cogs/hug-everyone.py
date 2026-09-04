@@ -7,6 +7,8 @@ class HugEveryone(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="hug-everyone", description="Hugs to everyone :3")
+    @app_commands.allowed_installs(guilds=True, users=True)
+    @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
     async def hug_everyone(self, interaction: discord.Interaction):
         display_name = interaction.user.display_name
         embed = discord.Embed(title=f"{display_name} hugs everyone :3",)
