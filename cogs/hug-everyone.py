@@ -11,7 +11,7 @@ class HugEveryone(commands.Cog):
     @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
     async def hug_everyone(self, interaction: discord.Interaction):
         display_name = interaction.user.display_name
-        embed = discord.Embed(title=f"{display_name} hugs everyone :3",)
+        embed = discord.Embed(title=f"{display_name} hugs everyone :3", color=discord.Color.purple())
         embed.set_image(url="https://c.tenor.com/SYsRdiK-T7gAAAAC/tenor.gif")
 
         await interaction.response.send_message(embed=embed)
