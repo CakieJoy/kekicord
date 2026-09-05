@@ -19,7 +19,7 @@ class MyBot(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix=None, intents=intents,)
     async def setup_hook(self):
-        await self.load_extension("cogs.hug-everyone")
+        await self.load_extension(f"cogs.{COMMANDS}")
         await self.tree.sync()
         print("Slash commands synced with Discord")
 
