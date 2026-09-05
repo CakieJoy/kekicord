@@ -7,6 +7,11 @@ from discord import app_commands
 from discord.ext import commands
 import dotenv
 
+COMMANDS = [
+    "hug-everyone"
+] # * Don't need add cogs. and .py just write file name
+# TODO : move this to config
+
 
 intents = discord.Intents.default()
 
