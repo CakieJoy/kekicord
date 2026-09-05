@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 CakieJoy
+
+
 # This file is a template for new commands.
 # Everyone can use it.
 # Please don't load this file in main.py!
