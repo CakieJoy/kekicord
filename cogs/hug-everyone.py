@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 CakieJoy
+
 import discord
 from discord import app_commands
 from discord.ext import commands
