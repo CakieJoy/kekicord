@@ -6,6 +6,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import dotenv
+from config_check import reload_config
 
 COMMANDS = [
     "hug-everyone"
@@ -19,6 +20,9 @@ class MyBot(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix=None, intents=intents,)
     async def setup_hook(self):
+        print("Loading config")
+        reload_config()
+        print("Loading cogs")
         await self.load_extension(f"cogs.{COMMANDS}")
         await self.tree.sync()
         print("Slash commands synced with Discord")
