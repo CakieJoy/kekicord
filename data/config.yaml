@@ -1,0 +1,5 @@
+debug:
+    IS_PROD: false # * Uses production bot key
+
+admin-list:
+  - 12345678901234567890 # * Write Discord UID here, you can add multiple admins by adding more UIDs in the list
