@@ -11,7 +11,6 @@ from config_check import reload_config
 COMMANDS = [
     "hug-everyone"
 ] # * Don't need add cogs. and .py just write file name
-# TODO : move this to config
 
 
 intents = discord.Intents.default()
