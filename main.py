@@ -22,7 +22,8 @@ class MyBot(commands.Bot):
         print("Loading config")
         reload_config()
         print("Loading cogs")
-        await self.load_extension(f"cogs.{COMMANDS}")
+        for cog in COMMANDS:
+            await self.load_extension(f"cogs.{cog}")
         await self.tree.sync()
         print("Slash commands synced with Discord")
 
