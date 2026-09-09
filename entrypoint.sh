@@ -13,5 +13,5 @@ fi
 echo "[INFO] Fixing permissions for kekicord user..."
 chown -R kekicord:kekicord /app
 
-echo "[INFO] Starting API"
+echo "[INFO] Starting BOT"
 exec gosu kekicord python3 main.py
